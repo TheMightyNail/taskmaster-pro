@@ -71,6 +71,12 @@ $(".list-group").on("blur", "textarea", function() {
 
   tasks[status][index].text = text;
   saveTasks();
+
+  var taskP = $("<p>")
+  .addClass("m=1")
+  .text(text);
+
+  $(this).replaceWith(taskP);
 });
 
 
